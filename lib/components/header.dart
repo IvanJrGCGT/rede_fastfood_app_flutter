@@ -4,7 +4,7 @@ import 'package:rede_fastfood_app_flutter/components/btnCustom.dart';
 
 header() {
   return Container(
-    width: double.infinity,
+    margin: EdgeInsets.all(10),
     height: 75,
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,

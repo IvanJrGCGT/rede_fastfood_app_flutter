@@ -25,6 +25,9 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 50,
+            ),
             child: SingleChildScrollView(
               child: Column(
                 children: [
