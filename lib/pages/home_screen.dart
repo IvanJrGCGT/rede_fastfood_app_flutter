@@ -3,6 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rede_fastfood_app_flutter/components/appColors.dart';
 import 'package:rede_fastfood_app_flutter/components/card.dart';
+import 'package:rede_fastfood_app_flutter/components/miniCard.dart';
 
 import '../components/header.dart';
 import '../components/inputFormCustom.dart';
@@ -72,6 +73,36 @@ class _HomePageState extends State<HomePage> {
                             imagem: '../../assets/bebidas.png',
                             scale: 4,
                             descricao: 'As melhores bebidas para você!'),
+                      ],
+                    ),
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        MiniCard(
+                          tamanho: 60,
+                          titulo: "McDonalds",
+                          imagem: "../../assets/mc.png",
+                        ),
+                        MiniCard(
+                          tamanho: 55,
+                          titulo: "Burguer King",
+                          imagem: "../../assets/bk.png",
+                        ),
+                        MiniCard(
+                          tamanho: 55,
+                          titulo: "KFC",
+                          imagem: "../../assets/kfc.png",
+                        ),
+                        MiniCard(
+                          tamanho: 55,
+                          titulo: "Giraffas",
+                          imagem: "../../assets/girafas.png",
+                        ),
                       ],
                     ),
                   )
