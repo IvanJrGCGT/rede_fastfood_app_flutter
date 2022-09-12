@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:rede_fastfood_app_flutter/components/appColors.dart';
+import 'package:rede_fastfood_app_flutter/components/card.dart';
 
 import '../components/header.dart';
 import '../components/inputFormCustom.dart';
@@ -44,7 +45,36 @@ class _HomePageState extends State<HomePage> {
                     'O que você precisa está aqui! Peça e receba onde estiver',
                     style: TextStyle(color: AppColors.grey, fontSize: 18),
                   ),
-                  InputFormCustom()
+                  InputFormCustom(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CardCustom(
+                          titulo: "Hamburgueria",
+                          descricao: "Deliciosos hamburguers para você!",
+                          imagem: "../../assets/hamburguer.png",
+                          scale: 6,
+                        ),
+                        CardCustom(
+                            titulo: 'Almoço',
+                            imagem: '../../assets/Pf.png',
+                            scale: 3,
+                            descricao: 'Delicosos almoços para você!'),
+                        CardCustom(
+                            titulo: 'Bebidas',
+                            imagem: '../../assets/bebidas.png',
+                            scale: 4,
+                            descricao: 'As melhores bebidas para você!'),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
