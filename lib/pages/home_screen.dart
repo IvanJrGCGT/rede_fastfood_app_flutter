@@ -53,62 +53,8 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: 20,
                   ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        CardCustom(
-                          titulo: "Hamburgueria",
-                          descricao: "Deliciosos hamburguers para você!",
-                          imagem: "../../assets/hamburguer.png",
-                          scale: 6,
-                        ),
-                        CardCustom(
-                            titulo: 'Almoço',
-                            imagem: '../../assets/Pf.png',
-                            scale: 3,
-                            descricao: 'Delicosos almoços para você!'),
-                        CardCustom(
-                            titulo: 'Bebidas',
-                            imagem: '../../assets/bebidas.png',
-                            scale: 4,
-                            descricao: 'As melhores bebidas para você!'),
-                      ],
-                    ),
-                  ),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        MiniCard(
-                          tamanho: 60,
-                          titulo: "McDonalds",
-                          imagem: "../../assets/mc.png",
-                        ),
-                        MiniCard(
-                          tamanho: 55,
-                          titulo: "Burguer King",
-                          imagem: "../../assets/bk.png",
-                        ),
-                        MiniCard(
-                          tamanho: 55,
-                          titulo: "KFC",
-                          imagem: "../../assets/kfc.png",
-                        ),
-                        MiniCard(
-                          tamanho: 55,
-                          titulo: "Giraffas",
-                          imagem: "../../assets/girafas.png",
-                        ),
-                      ],
-                    ),
-                  )
+                  openCards(),
+                  restaurantesProximos()
                 ],
               ),
             ),
@@ -117,4 +63,82 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+openCards() {
+  return SingleChildScrollView(
+    scrollDirection: Axis.horizontal,
+    child: Row(
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        CardCustom(
+          titulo: "Hamburgueria",
+          descricao: "Deliciosos hamburguers para você!",
+          imagem: "../../assets/hamburguer.png",
+          scale: 6,
+        ),
+        CardCustom(
+            titulo: 'Almoço',
+            imagem: '../../assets/Pf.png',
+            scale: 3,
+            descricao: 'Delicosos almoços para você!'),
+        CardCustom(
+            titulo: 'Bebidas',
+            imagem: '../../assets/bebidas.png',
+            scale: 4,
+            descricao: 'As melhores bebidas para você!'),
+      ],
+    ),
+  );
+}
+
+restaurantesProximos() {
+  return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Column(
+        children: [
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            'Estabelecimentos mais proximos de você',
+            style: TextStyle(
+              fontSize: 32,
+              color: AppColors.primary,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              MiniCard(
+                tamanho: 60,
+                titulo: "McDonalds",
+                imagem: "../../assets/mc.png",
+              ),
+              MiniCard(
+                tamanho: 55,
+                titulo: "Burguer King",
+                imagem: "../../assets/bk.png",
+              ),
+              MiniCard(
+                tamanho: 55,
+                titulo: "KFC",
+                imagem: "../../assets/kfc.png",
+              ),
+              MiniCard(
+                tamanho: 55,
+                titulo: "Giraffas",
+                imagem: "../../assets/girafas.png",
+              ),
+            ],
+          ),
+        ],
+      ));
 }
