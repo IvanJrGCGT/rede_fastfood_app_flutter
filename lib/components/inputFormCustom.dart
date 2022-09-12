@@ -19,9 +19,10 @@ class InputFormCustom extends StatelessWidget {
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(9))),
           ),
-          TextButtonCustom(
+          const TextButtonCustom(
             onPressed: null,
             textButton: 'Buscar',
+            btnStyle: null,
           )
         ],
       ),
